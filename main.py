@@ -8,12 +8,21 @@ def main():
 if __name__ == "__main__":
     df = pd.read_csv("data/data.csv", index_col="Name")
 
-    # tall_poki = df[df['Height']>2]
-    # Heavy_poki = df[df['Weight']>=100]
-    # legen_poki = df[df['Legendary']>=1]
+    # Whole DataFrame
+    # print(df.sum(numeric_only=True))
+    # print(df.mean( numeric_only=True))
+    # print(df.min( numeric_only=True))
+    # print(df.max( numeric_only=True))
+    # print(df.count())
 
-    # waterType = df[(df["Type1"] == "Water") |
-    #                (df["Type2"] == "Water")]
+    # single column
+    # print(df["Height"].sum())
+    # print(df["Height"].mean())
+    # print(df["Height"].min())
+    # print(df["Height"].max())
+    # print(df["Height"].count())
 
-    ff_poki = df[(df["Type1"] == "Fire") & (df["Type2"] == "Flying")]
-    print(ff_poki)
+    group = df.groupby("Type1")
+
+    # print(group["Height"].mean())
+    # print(group["Height"].count())

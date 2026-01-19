@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the JSON data
-df = pd.read_json('data.json', lines=True)
+df = pd.read_csv("data/data.csv")
 
 # Display basic info
 print(f"Dataset shape: {df.shape}")
